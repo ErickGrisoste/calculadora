@@ -4,26 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body style="background-color: rgb(163, 154, 154);">
-    <div class="calculadora">
-        <div class="inputs">
-            <input type="number" id="num1" placeholder="Numero 1">
-            <input type="number" id="num2" placeholder="Numero 2">    
+   <div class="calculadora">
+        <div class="display">
+            <input type="text" id="tela" readonly>
         </div>
 
         <div class="botoes">
-            <button onclick="somar()">+</button>
-            <button onclick="subtrair()">-</button>
-            <button onclick="multiplicar()">*</button>
-            <button onclick="dividir()">/</button>
+            <button onclick="expressao('7')">7</button>
+            <button onclick="expressao('8')">8</button>
+            <button onclick="expressao('9')">9</button>
+            <button onclick="expressao('*')">*</button>
+
+            <button onclick="expressao('4')">4</button>
+            <button onclick="expressao('5')">5</button>
+            <button onclick="expressao('6')">6</button>
+            <button onclick="expressao('-')">-</button>
+
+            <button onclick="expressao('3')">3</button>
+            <button onclick="expressao('2')">2</button>
+            <button onclick="expressao('1')">1</button>
+            <button onclick="expressao('+')">+</button>
+
+            <button onclick="expressao('0')">0</button>
+            <button onclick="resultado()">=</button>
+            <button onclick="limpar()">C</button>
+            <button onclick="expressao('/')">/</button>
+
         </div>
 
-        <div class="resultado">
-            <h1>Resultado</h1>
-            <h2 id="resultado"></h2>
-        </div>
-    </div>
+   </div>
 
     
 

@@ -1,37 +1,21 @@
-function lerNum1(){
-    var num1 = parseFloat(document.getElementById('num1').value);
-    return num1;
+function expressao(parametro){
+
+    document.getElementById('tela').value += parametro;
+
 }
 
-function lerNum2(){
-    var num2 = parseFloat(document.getElementById('num2').value);
-    return num2;
-}
+function resultado(){
 
-function somar(){
-    let resultado = lerNum1() + lerNum2();
-    document.getElementById('resultado').innerText = resultado;
-}
-
-function subtrair(){
-    let resultado = lerNum1() - lerNum2();
-    document.getElementById('resultado').innerText = resultado;
-}
-
-function multiplicar(){
-    let resultado = lerNum1() * lerNum2();
-    document.getElementById('resultado').innerText = resultado;
-}
-
-function dividir(){
-    let resultado = lerNum1() / lerNum2();
-
-    if(lerNum2() !== 0){
-        document.getElementById('resultado').innerText = resultado;
-    } else{
-        document.getElementById('resultado').innerText = "!!!";
+    try {
+        let expressao = document.getElementById('tela').value;
+        let resultado = eval(expressao);
+        document.getElementById('tela').value = resultado;
+    } catch (error) {
+        document.getElementById('tela').value = "erro";
     }
 
-    
 }
 
+function limpar(){
+    document.getElementById('tela').value = "";
+}
